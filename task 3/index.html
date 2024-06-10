@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .calculator-container {
+            background-color:white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .calculator {
+            max-width: 300px;
+            width: 100%;
+        }
+
+        #display {
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .buttons button {
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .operator-button {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .equal-button {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+
+        .number-button {
+            background-color: #17a2b8;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('https://thumbs.dreamstime.com/b/accounting-8941461.jpg'); background-attachment: fixed;background-repeat: no-repeat;background-size: cover;">
+    <div class="calculator-container">
+        <div>
+            <h1 class="text-center" style="font-family: 'Times New Roman', Times, serif;">Simple Calculator</h1>
+        </div>
+        
+        <div class="calculator">
+            <input type="text" id="display" class="form-control" readonly>
+            <div class="buttons">
+                <button class="number-button" onclick="appendToDisplay('1')">1</button>
+                <button class="number-button" onclick="appendToDisplay('2')">2</button>
+                <button class="number-button" onclick="appendToDisplay('3')">3</button>
+                <button class="operator-button" onclick="appendToDisplay('+')">+</button>
+                <button class="number-button" onclick="appendToDisplay('4')">4</button>
+                <button class="number-button" onclick="appendToDisplay('5')">5</button>
+                <button class="number-button" onclick="appendToDisplay('6')">6</button>
+                <button class="operator-button" onclick="appendToDisplay('-')">-</button>
+                <button class="number-button" onclick="appendToDisplay('7')">7</button>
+                <button class="number-button" onclick="appendToDisplay('8')">8</button>
+                <button class="number-button" onclick="appendToDisplay('9')">9</button>
+                <button class="operator-button" onclick="appendToDisplay('*')">*</button>
+                <button class="number-button" onclick="appendToDisplay('0')">0</button>
+                <button class="equal-button" onclick="calculate()">=</button>
+                <button class="operator-button" onclick="appendToDisplay('/')">/</button>
+                <button class="equal-button" onclick="clearDisplay()">C</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="calculate.js"></script>
+
+    
+</body>
+
+</html>
